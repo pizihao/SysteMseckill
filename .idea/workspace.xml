@@ -1,11 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="454d7e55-5754-4cb9-9652-47721696c86c" name="Default Changelist" comment="" />
+    <list default="true" id="454d7e55-5754-4cb9-9652-47721696c86c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/miaosha/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/MiaoShaApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/controller/BaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/controller/ItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/controller/viewobject/ItemVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/controller/viewobject/UserVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/error/BusinessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/error/CommonError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/error/EmBusinessError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/mapper/ItemMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/mapper/ItemStockMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/pojo/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/pojo/ItemStock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/response/CommonReturnType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/ItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/impl/ItemServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/model/ItemModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/model/PromoModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/model/UserModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/validator/ValidationResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/validator/ValidatorImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/resources/mapper/ItemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/resources/mapper/ItemStockMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -19,18 +63,83 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1ckNS9TdGDUA1s3jAj41GaRsGwb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="MyBatisLogPluginparameters" value="Parameters:" />
+    <property name="MyBatisLogPluginpreparing" value="Preparing:" />
+    <property name="MyBatisLogPluginrunning" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/miaosha/src/main/resources/mapper" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ideawenjain\SysteMseckill\miaosha\src\main\resources\mapper" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.liu.miaosha.controller.viewobject" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ideawenjain\SysteMseckill\miaosha\src\main\resources\mapper" />
+      <recent name="D:\ideawenjain\SysteMseckill\miaosha\src\main\java\com\liu\miaosha\pojo" />
+      <recent name="D:\ideawenjain\SysteMseckill\miaosha\src\main\java\com\liu\miaosha\mapper" />
+      <recent name="D:\ideawenjain\SysteMseckill\miaosha\src\main\java\com\liu\miaosha" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MiaoShaApplication">
+    <configuration name="miaosha" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mybatis-generator:generate" />
+                <option value="-e" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/miaosha" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="MiaoShaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="miaosha" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.liu.miaosha.MiaoShaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Maven.miaosha" />
+      <item itemvalue="Spring Boot.MiaoShaApplication" />
+    </list>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -54,8 +163,90 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591068628564</updated>
-      <workItem from="1591068630777" duration="2000" />
+      <workItem from="1591068630777" duration="986000" />
+      <workItem from="1591151122881" duration="34325000" />
+      <workItem from="1591317154242" duration="15064000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="550" y="28" key="#Inspections" timestamp="1591158794178">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="550" y="28" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1591158794178" />
+    <state x="201" y="24" width="1165" height="685" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591244954209">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="201" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591244954209" />
+    <state x="201" y="24" width="1165" height="685" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1591159338436" />
+    <state x="768" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1591321574904">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="768" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591321574904" />
+    <state x="768" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1591241150288" />
+    <state x="413" y="144" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1591324862369">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="144" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591324862369" />
+    <state x="563" y="124" key="FileChooserDialogImpl" timestamp="1591277934615">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="563" y="124" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591277934615" />
+    <state x="563" y="124" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591157318547" />
+    <state width="1323" height="108" key="GridCell.Tab.0.bottom" timestamp="1591338329212">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="108" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591338329212" />
+    <state width="690" height="215" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591241073036" />
+    <state width="1323" height="108" key="GridCell.Tab.0.center" timestamp="1591338329211">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="108" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591338329211" />
+    <state width="690" height="215" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591241073036" />
+    <state width="1323" height="108" key="GridCell.Tab.0.left" timestamp="1591338329211">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="108" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591338329211" />
+    <state width="690" height="215" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591241073036" />
+    <state width="1323" height="108" key="GridCell.Tab.0.right" timestamp="1591338329211">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="108" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591338329211" />
+    <state width="690" height="215" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591241073036" />
+    <state width="1323" height="108" key="GridCell.Tab.1.bottom" timestamp="1591338329216">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="108" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591338329216" />
+    <state width="690" height="215" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591241073037" />
+    <state width="1323" height="108" key="GridCell.Tab.1.center" timestamp="1591338329216">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="108" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591338329216" />
+    <state width="690" height="215" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1591241073037" />
+    <state width="1323" height="108" key="GridCell.Tab.1.left" timestamp="1591338329216">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="108" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591338329216" />
+    <state width="690" height="215" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1591241073036" />
+    <state width="1323" height="108" key="GridCell.Tab.1.right" timestamp="1591338329216">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="108" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591338329216" />
+    <state width="690" height="215" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1591241073037" />
+    <state x="23" y="69" key="new project wizard" timestamp="1591152956180">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="23" y="69" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1591152956180" />
+    <state x="386" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1591244889972">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="386" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591244889972" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591338908998">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591338908998" />
   </component>
 </project>
