@@ -2,33 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="454d7e55-5754-4cb9-9652-47721696c86c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/mapper/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/mapper/PromoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/mapper/SequenceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/pojo/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/pojo/Promo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/pojo/Sequence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/PromoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/impl/PromoServerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miaosha/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miaosha/src/main/resources/mapper/PromoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miaosha/src/main/resources/mapper/SequenceMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/controller/viewobject/ItemVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/controller/viewobject/ItemVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/error/EmBusinessError.java" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/error/EmBusinessError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/ItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/impl/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/impl/ItemServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/model/OrderModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/model/OrderModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/model/PromoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/service/model/PromoModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miaosha/target/classes/META-INF/miaosha.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miaosha/target/classes/com/liu/miaosha/controller/ItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/target/classes/com/liu/miaosha/controller/ItemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miaosha/target/classes/com/liu/miaosha/controller/viewobject/ItemVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/target/classes/com/liu/miaosha/controller/viewobject/ItemVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miaosha/target/classes/com/liu/miaosha/error/EmBusinessError.class" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/target/classes/com/liu/miaosha/error/EmBusinessError.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miaosha/target/classes/com/liu/miaosha/service/ItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/target/classes/com/liu/miaosha/service/ItemService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miaosha/target/classes/com/liu/miaosha/service/impl/ItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/target/classes/com/liu/miaosha/service/impl/ItemServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/config/WebServerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/mapper/UserMapperMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/mapper/UserPasswordMapperMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/pojo/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/pojo/UserMapperExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/pojo/UserPasswordMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha/pojo/UserPasswordMapperExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/resources/jmx/商品详情页接口压测.jmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/resources/mapper/mybatis/UserMapperMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miaosha/src/main/resources/mapper/mybatis/UserPasswordMapperMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miaosha/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miaosha/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miaosha/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miaosha/target/classes/com/liu/miaosha/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/target/classes/com/liu/miaosha/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miaosha/target/classes/com/liu/miaosha/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/target/classes/com/liu/miaosha/service/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miaosha/target/classes/com/liu/miaosha/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/miaosha/target/classes/com/liu/miaosha/service/impl/OrderServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,28 +70,29 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/miaosha/src/main/resources/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/miaosha/src/main/java/com/liu/miaosha" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\ideawenjain\SysteMseckill\miaosha\src\main\resources\mapper" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.liu.miaosha.controller.viewobject" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ideawenjain\SysteMseckill\miaosha\src\main\java\com\liu\miaosha" />
+      <recent name="D:\ideawenjain\SysteMseckill\miaosha\src\main\resources\mapper" />
+      <recent name="D:\ideawenjain\SysteMseckill\miaosha\src\main\java\com\liu\miaosha\pojo" />
+      <recent name="D:\ideawenjain\SysteMseckill\miaosha\src\main\java\com\liu\miaosha\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.liu.miaosha.pojo" />
       <recent name="com.liu.miaosha.mapper" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ideawenjain\SysteMseckill\miaosha\src\main\resources" />
       <recent name="D:\ideawenjain\SysteMseckill\miaosha\src\main\resources\mapper" />
-      <recent name="D:\ideawenjain\SysteMseckill\miaosha\src\main\java\com\liu\miaosha\pojo" />
-      <recent name="D:\ideawenjain\SysteMseckill\miaosha\src\main\java\com\liu\miaosha\mapper" />
-      <recent name="D:\ideawenjain\SysteMseckill\miaosha\src\main\java\com\liu\miaosha" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.MiaoShaApplication">
@@ -169,7 +159,7 @@
       <workItem from="1591068630777" duration="986000" />
       <workItem from="1591151122881" duration="34325000" />
       <workItem from="1591317154242" duration="31911000" />
-      <workItem from="1591408021477" duration="4501000" />
+      <workItem from="1591408021477" duration="11212000" />
     </task>
     <servers />
   </component>
@@ -200,50 +190,50 @@
     </state>
     <state x="563" y="124" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591277934615" />
     <state x="563" y="124" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591157318547" />
-    <state width="1323" height="317" key="GridCell.Tab.0.bottom" timestamp="1591409942443">
+    <state width="1323" height="151" key="GridCell.Tab.0.bottom" timestamp="1591457674591">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="317" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591409942443" />
+    <state width="1323" height="151" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591457674591" />
     <state width="690" height="215" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591241073036" />
-    <state width="1323" height="317" key="GridCell.Tab.0.center" timestamp="1591409942443">
+    <state width="1323" height="151" key="GridCell.Tab.0.center" timestamp="1591457674591">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="317" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591409942443" />
+    <state width="1323" height="151" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591457674591" />
     <state width="690" height="215" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591241073036" />
-    <state width="1323" height="317" key="GridCell.Tab.0.left" timestamp="1591409942443">
+    <state width="1323" height="151" key="GridCell.Tab.0.left" timestamp="1591457674591">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="317" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591409942443" />
+    <state width="1323" height="151" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591457674591" />
     <state width="690" height="215" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591241073036" />
-    <state width="1323" height="317" key="GridCell.Tab.0.right" timestamp="1591409942443">
+    <state width="1323" height="151" key="GridCell.Tab.0.right" timestamp="1591457674591">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="317" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591409942443" />
+    <state width="1323" height="151" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591457674591" />
     <state width="690" height="215" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591241073036" />
-    <state width="1323" height="258" key="GridCell.Tab.1.bottom" timestamp="1591409940624">
+    <state width="1323" height="333" key="GridCell.Tab.1.bottom" timestamp="1591435445262">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="258" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591409940624" />
+    <state width="1323" height="333" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591435445262" />
     <state width="690" height="215" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591241073037" />
-    <state width="1323" height="258" key="GridCell.Tab.1.center" timestamp="1591409940624">
+    <state width="1323" height="333" key="GridCell.Tab.1.center" timestamp="1591435445261">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="258" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591409940624" />
+    <state width="1323" height="333" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591435445261" />
     <state width="690" height="215" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1591241073037" />
-    <state width="1323" height="258" key="GridCell.Tab.1.left" timestamp="1591409940623">
+    <state width="1323" height="333" key="GridCell.Tab.1.left" timestamp="1591435445261">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="258" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591409940623" />
+    <state width="1323" height="333" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591435445261" />
     <state width="690" height="215" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1591241073036" />
-    <state width="1323" height="258" key="GridCell.Tab.1.right" timestamp="1591409940624">
+    <state width="1323" height="333" key="GridCell.Tab.1.right" timestamp="1591435445262">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="258" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591409940624" />
+    <state width="1323" height="333" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591435445262" />
     <state width="690" height="215" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1591241073037" />
-    <state x="368" y="119" width="630" height="490" key="find.popup" timestamp="1591356909325">
+    <state x="368" y="119" width="630" height="490" key="find.popup" timestamp="1591455740563">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="368" y="119" width="630" height="490" key="find.popup/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591356909325" />
+    <state x="368" y="119" width="630" height="490" key="find.popup/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591455740563" />
     <state x="23" y="69" key="new project wizard" timestamp="1591152956180">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -252,9 +242,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="386" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591244889972" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591346971813">
+    <state x="429" y="111" width="672" height="678" key="search.everywhere.popup" timestamp="1591455797416">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591346971813" />
+    <state x="429" y="111" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1591455797416" />
   </component>
 </project>
