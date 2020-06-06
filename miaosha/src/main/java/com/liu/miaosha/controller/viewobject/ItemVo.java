@@ -6,7 +6,7 @@ import java.math.BigDecimal;
  * @author shidacaizi
  * @date 2020/6/5 10:41
  */
-public class ItemVO {
+public class ItemVo {
     private Integer id;
 
     //商品名称

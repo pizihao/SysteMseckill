@@ -86,4 +86,17 @@ public class PromoModel implements Serializable {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "PromoModel{" +
+                "id=" + id +
+                ", status=" + status +
+                ", promoName='" + promoName + '\'' +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", itemId=" + itemId +
+                ", promoItemPrice=" + promoItemPrice +
+                '}';
+    }
 }

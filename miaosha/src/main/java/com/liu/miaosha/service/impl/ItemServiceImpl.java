@@ -7,7 +7,9 @@ import com.liu.miaosha.mapper.ItemStockMapper;
 import com.liu.miaosha.pojo.Item;
 import com.liu.miaosha.pojo.ItemStock;
 import com.liu.miaosha.service.ItemService;
+import com.liu.miaosha.service.PromoService;
 import com.liu.miaosha.service.model.ItemModel;
+import com.liu.miaosha.service.model.PromoModel;
 import com.liu.miaosha.validator.ValidationResult;
 import com.liu.miaosha.validator.ValidatorImpl;
 import org.springframework.beans.BeanUtils;
@@ -34,6 +36,9 @@ public class ItemServiceImpl implements ItemService {
 
     @Autowired
     private ItemStockMapper itemStockMapper;
+
+    @Autowired
+    private PromoService promoService;
 
     @Override
     @Transactional
@@ -91,12 +96,25 @@ public class ItemServiceImpl implements ItemService {
         ItemStock itemStock = itemStockMapper.selectByItemId(item.getId());
         //将dataobject->model
         ItemModel itemModel = convertModelFromDataObject(item,itemStock);
-//        //获取活动商品信息
-//        PromoModel promoModel = promoService.getPromoByItemId(itemModel.getId());
-//        if(promoModel != null && promoModel.getStatus().intValue() != 3){
-//            itemModel.setPromoModel(promoModel);
-//        }
+        //获取活动商品信息
+        PromoModel promoModel = promoService.getPromoByItemId(itemModel.getId());
+        if(promoModel != null && promoModel.getStatus().intValue() != 3){
+            itemModel.setPromoModel(promoModel);
+        }
         return itemModel;
+    }
+
+    @Override
+    @Transactional
+    public boolean decreaseStock(Integer itemId, Integer amount) throws BusinessException {
+        int affectedRow = itemStockMapper.decreaseStock(itemId,amount);
+        return affectedRow > 0;
+    }
+
+    @Override
+    @Transactional
+    public void increaseSales(Integer itemId, Integer amount) throws BusinessException {
+         itemMapper.increaseSales(itemId,amount);
     }
 
     private ItemModel convertModelFromDataObject(Item item, ItemStock itemStock) {

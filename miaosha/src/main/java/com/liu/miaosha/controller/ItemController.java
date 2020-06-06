@@ -1,8 +1,7 @@
 package com.liu.miaosha.controller;
 
-import com.liu.miaosha.controller.viewobject.ItemVO;
+import com.liu.miaosha.controller.viewobject.ItemVo;
 import com.liu.miaosha.error.BusinessException;
-import com.liu.miaosha.pojo.Item;
 import com.liu.miaosha.response.CommonReturnType;
 import com.liu.miaosha.service.ItemService;
 import com.liu.miaosha.service.model.ItemModel;
@@ -44,9 +43,9 @@ public class ItemController extends BaseController{
         itemModel.setImgUrl(imgUrl);
 
         ItemModel itemModelForReturn = itemService.createItem(itemModel);
-        ItemVO itemVO = convertVOFromModel(itemModelForReturn);
+        ItemVo itemVo = convertVoFromModel(itemModelForReturn);
 
-        return CommonReturnType.create(itemVO);
+        return CommonReturnType.create(itemVo);
     }
 
     //商品详情页浏览
@@ -54,8 +53,8 @@ public class ItemController extends BaseController{
     @ResponseBody
     public CommonReturnType getItem(@RequestParam(name="id") Integer id){
         ItemModel itemModel = itemService.getItemById(id);
-        ItemVO itemVO = convertVOFromModel(itemModel);
-        return CommonReturnType.create(itemVO);
+        ItemVo itemVo = convertVoFromModel(itemModel);
+        return CommonReturnType.create(itemVo);
     }
 
     //商品列表页面浏览展示
@@ -63,25 +62,25 @@ public class ItemController extends BaseController{
     @ResponseBody
     public CommonReturnType getItemList(){
         List<ItemModel> itemList = itemService.listItem();
-        List<ItemVO> collect = itemList.stream().map(this::convertVOFromModel).collect(Collectors.toList());
+        List<ItemVo> collect = itemList.stream().map(this::convertVoFromModel).collect(Collectors.toList());
         return CommonReturnType.create(collect);
     }
 
-    private ItemVO convertVOFromModel(ItemModel itemModel){
+    private ItemVo convertVoFromModel(ItemModel itemModel){
         if(itemModel == null){
             return null;
         }
-        ItemVO itemVO = new ItemVO();
-        BeanUtils.copyProperties(itemModel,itemVO);
+        ItemVo itemVo = new ItemVo();
+        BeanUtils.copyProperties(itemModel,itemVo);
         if(itemModel.getPromoModel() != null){
             //有正在进行或即将进行的秒杀活动
-            itemVO.setPromoStatus(itemModel.getPromoModel().getStatus());
-            itemVO.setPromoId(itemModel.getPromoModel().getId());
-            itemVO.setStartDate(itemModel.getPromoModel().getStartDate().toString(DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss")));
-            itemVO.setPromoPrice(itemModel.getPromoModel().getPromoItemPrice());
+            itemVo.setPromoStatus(itemModel.getPromoModel().getStatus());
+            itemVo.setPromoId(itemModel.getPromoModel().getId());
+            itemVo.setStartDate(itemModel.getPromoModel().getStartDate().toString(DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss")));
+            itemVo.setPromoPrice(itemModel.getPromoModel().getPromoItemPrice());
         }else{
-            itemVO.setPromoStatus(0);
+            itemVo.setPromoStatus(0);
         }
-        return itemVO;
+        return itemVo;
     }
 }
