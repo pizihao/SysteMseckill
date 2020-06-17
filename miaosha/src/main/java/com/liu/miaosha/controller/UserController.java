@@ -1,5 +1,6 @@
 package com.liu.miaosha.controller;
 
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.StringUtils;
 import com.liu.miaosha.controller.viewobject.UserVo;
 import com.liu.miaosha.error.BusinessException;
@@ -18,6 +19,8 @@ import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Random;
+import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author shidacaizi
@@ -29,6 +32,9 @@ import java.util.Random;
 public class UserController extends BaseController {
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @Autowired
     private HttpServletRequest httpServletRequest;
@@ -124,17 +130,15 @@ public class UserController extends BaseController {
         //修改成若用户登录验证成功后将对应的登录信息和登录凭证一起存入redis中
 
         //生成登录凭证token，UUID
-//        String uuidToken = UUID.randomUUID().toString();
-//        uuidToken = uuidToken.replace("-","");
+        String uuidToken = UUID.randomUUID().toString();
+        uuidToken = uuidToken.replace("-","");
         //建议token和用户登陆态之间的联系
-//        redisTemplate.opsForValue().set(uuidToken,userModel);
-//        redisTemplate.expire(uuidToken,1, TimeUnit.HOURS);
-
-        this.httpServletRequest.getSession().setAttribute("IS_LOGIN",true);
-        this.httpServletRequest.getSession().setAttribute("LOGIN_USER",userModel);
-
+        redisTemplate.opsForValue().set(uuidToken,userModel);
+        redisTemplate.expire(uuidToken,1, TimeUnit.HOURS);
+//        this.httpServletRequest.getSession().setAttribute("IS_LOGIN",true);
+//        this.httpServletRequest.getSession().setAttribute("LOGIN_USER",userModel);
         //下发了token
-//        return CommonReturnType.create(uuidToken);
-        return CommonReturnType.create(null);
+        return CommonReturnType.create(uuidToken);
+//        return CommonReturnType.create(null);
     }
 }
