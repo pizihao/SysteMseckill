@@ -7,6 +7,7 @@ import com.liu.miaosha.mapper.UserPasswordMapper;
 import com.liu.miaosha.pojo.UserInfo;
 import com.liu.miaosha.pojo.UserPassword;
 import com.liu.miaosha.service.UserService;
+import com.liu.miaosha.service.model.ItemModel;
 import com.liu.miaosha.service.model.UserModel;
 import com.liu.miaosha.validator.ValidationResult;
 import com.liu.miaosha.validator.ValidatorImpl;
@@ -14,8 +15,11 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author shidacaizi
@@ -30,6 +34,8 @@ public class UserServiceImpl implements UserService {
     private UserPasswordMapper userPasswordMapper;
     @Autowired
     private ValidatorImpl validator;
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @Override
     public UserModel getUserById(Integer id) {
@@ -42,6 +48,17 @@ public class UserServiceImpl implements UserService {
         UserPassword userPassword = userPasswordMapper.selectByUserId(userInfo.getId());
 
         return convertFromDataObject(userInfo, userPassword);
+    }
+
+    @Override
+    public UserModel getUserByIdInCache(Integer id) {
+        UserModel userModel = (UserModel) redisTemplate.opsForValue().get("user_validate_" + id);
+        if (userModel == null){
+            userModel = this.getUserById(id);
+            redisTemplate.opsForValue().set("user_validate_"+id,userModel);
+            redisTemplate.expire("user_validate_"+id, 10, TimeUnit.MINUTES);
+        }
+        return userModel;
     }
 
     @Override

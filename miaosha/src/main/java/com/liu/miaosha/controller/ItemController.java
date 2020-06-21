@@ -5,6 +5,7 @@ import com.liu.miaosha.error.BusinessException;
 import com.liu.miaosha.response.CommonReturnType;
 import com.liu.miaosha.service.CacheService;
 import com.liu.miaosha.service.ItemService;
+import com.liu.miaosha.service.PromoService;
 import com.liu.miaosha.service.model.ItemModel;
 import org.joda.time.format.DateTimeFormat;
 import org.springframework.beans.BeanUtils;
@@ -34,6 +35,9 @@ public class ItemController extends BaseController{
 
     @Autowired
     private CacheService cacheService;
+
+    @Autowired
+    private PromoService promoService;
 
     //创建商品的controller
     @RequestMapping(value = "/create",method = {RequestMethod.POST},consumes={CONTENT_TYPE_FROMED})
@@ -78,6 +82,13 @@ public class ItemController extends BaseController{
         }
         ItemVo itemVo = convertVoFromModel(itemModel);
         return CommonReturnType.create(itemVo);
+    }
+
+    @RequestMapping(value = "/publishpromo",method = {RequestMethod.GET})
+    @ResponseBody
+    public CommonReturnType publishpromo(@RequestParam(name = "id") Integer id) {
+        promoService.publishPromo(id);
+        return CommonReturnType.create(null);
     }
 
     //商品列表页面浏览展示

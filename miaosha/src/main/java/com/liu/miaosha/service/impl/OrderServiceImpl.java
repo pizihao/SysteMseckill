@@ -4,19 +4,24 @@ import com.liu.miaosha.error.BusinessException;
 import com.liu.miaosha.error.EmBusinessError;
 import com.liu.miaosha.mapper.OrderMapper;
 import com.liu.miaosha.mapper.SequenceMapper;
+import com.liu.miaosha.mapper.StockLogMapper;
 import com.liu.miaosha.pojo.Order;
 import com.liu.miaosha.pojo.Sequence;
+import com.liu.miaosha.pojo.StockLog;
 import com.liu.miaosha.service.ItemService;
 import com.liu.miaosha.service.OrderService;
 import com.liu.miaosha.service.UserService;
 import com.liu.miaosha.service.model.ItemModel;
 import com.liu.miaosha.service.model.OrderModel;
 import com.liu.miaosha.service.model.UserModel;
+import lombok.SneakyThrows;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionSynchronizationAdapter;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -37,31 +42,35 @@ public class OrderServiceImpl implements OrderService {
     private OrderMapper orderMapper;
     @Autowired
     private SequenceMapper sequenceMapper;
+    @Autowired
+    private StockLogMapper stockLogMapper;
 
     @Override
-    public void createOrder(Integer userId, Integer itemId, Integer amount, Integer promoId) throws BusinessException {
+    @Transactional
+    public OrderModel createOrder(Integer userId, Integer itemId, Integer amount, Integer promoId, String stockLogId) throws BusinessException {
         //校验下单状态,下单的商品是否存在，用户是否合法，购买的数量是否正确
-        ItemModel itemModel = itemService.getItemById(itemId);
+//        ItemModel itemModel = itemService.getItemById(itemId);
+        ItemModel itemModel = itemService.getItemByIdInCache(itemId);
         if (itemModel == null){
             throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR, "商品信息不存在");
         }
-        UserModel userModel = userService.getUserById(userId);
-        if (userModel == null){
-            throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR, "用户信息不存在");
-        }
+//        UserModel userModel = userService.getUserById(userId);
+//        if (userModel == null){
+//            throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR, "用户信息不存在");
+//        }
         if (amount <= 0 || amount > 99){
             throw  new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR,"数量信息不正确");
         }
         //校验活动信息
-        if (promoId != null){
-            //（1）校验对应活动是否存在这个适用商品
-            if (promoId.intValue() != itemModel.getPromoModel().getId()){
-                throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR,"活动信息不正确");
-                //（2）校验活动是否正在进行中
-            }else if (itemModel.getPromoModel().getStatus().intValue() != 2){
-                throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR,"活动还未开始");
-            }
-        }
+//        if (promoId != null){
+//            //（1）校验对应活动是否存在这个适用商品
+//            if (promoId.intValue() != itemModel.getPromoModel().getId()){
+//                throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR,"活动信息不正确");
+//                //（2）校验活动是否正在进行中
+//            }else if (itemModel.getPromoModel().getStatus().intValue() != 2){
+//                throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR,"活动还未开始");
+//            }
+//        }
 
         //落单减库存
         boolean result = itemService.decreaseStock(itemId,amount);
@@ -86,7 +95,27 @@ public class OrderServiceImpl implements OrderService {
         orderMapper.insertSelective(order);
         //加上商品的销量
         itemService.increaseSales(itemId,amount);
+        //设置库存流水状态为成功
+
+        StockLog stockLog = stockLogMapper.selectByPrimaryKey(stockLogId);
+        if(stockLog == null){
+            throw new BusinessException(EmBusinessError.UNKNOWN_ERROR);
+        }
+        stockLog.setStatus(2);
+        stockLogMapper.updateByPrimaryKeySelective(stockLog);
+//        TransactionSynchronizationManager.registerSynchronization(new TransactionSynchronizationAdapter() {
+//            @Override
+//            public void afterCommit(){
+//                //异步更新库存
+//                boolean mqResults = itemService.asyncDecreaseStock(itemId,amount);
+////                if (!mqResults){
+////                    itemService.increaseStock(itemId,amount);
+////                    throw new BusinessException(EmBusinessError.MQ_SEND_FAIL);
+////                }
+//            }
+//        });
         //返回前端
+        return orderModel;
     }
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)
